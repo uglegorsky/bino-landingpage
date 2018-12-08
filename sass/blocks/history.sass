@@ -1,0 +1,48 @@
+.history
+  display: flex
+  justify-content: space-between
+  margin: 140px auto
+  .history__left
+    flex-basis: 43.2%
+    margin-right: 80px
+    img
+      display: block
+      max-width: 100%
+  .history__right
+    flex-basis: calc(100% - 43.2% - 80px)
+    p
+      font-size: 14px
+      line-height: 29px
+      color: #999999
+      font-family: 'Source Sans Pro', sans-serif
+      margin: 25px 0
+    .history__title
+      color: $gray
+      font-size: 36px
+      line-height: 36px
+      letter-spacing: 3.9px
+      text-transform: uppercase
+      font-weight: 700
+      padding-left: 30px
+      border-left: 6px solid $red
+      margin-top: 0
+      margin-bottom: 30px
+    a
+      @include btn()
+      margin-top: 20px
+
+@media (max-width: 980px)
+  .history
+    margin: 50px 0
+    .history__left
+      margin-right: 25px
+      align-self: center
+    .history__right
+      flex-basis: calc(100% - 43.2% - 25px)
+
+@media (max-width: 680px)
+  .history
+    flex-direction: column
+    .history__left
+      margin-right: 0
+      margin-bottom: 30px

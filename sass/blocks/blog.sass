@@ -1,0 +1,143 @@
+.blog
+  background-color: $white-gray
+  padding: 140px 0 0
+  border-top: 1px solid #d8d9db
+  p
+    font-size: 14px
+    margin: 20px 0
+    text-align: center
+    line-height: 29px
+    color: $advatages-gray
+  .blog__devider
+    @include devider($advatages-gray)
+  .blog__title
+    text-align: center
+    color: $gray
+    font-size: 36px
+    letter-spacing: 3.6px
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 700
+    text-transform: uppercase
+  .blog__block
+    display: flex
+    flex-wrap: wrap
+    max-width: 1920px
+    margin: 60px auto 0
+  .blog__element
+    flex-basis: 50%
+    display: flex
+    flex-wrap: wrap
+  .blog__element--reverse
+    .blog__img
+      order: 2
+    .blog__text
+      order: 1
+      &::before
+        border-right: 30px solid transparent
+        border-left: 25px solid $red
+        left: auto
+        right: -55px
+  .blog__img
+    flex-basis: 50%
+    img
+      display: block
+      max-width: 100%
+      height: 100%
+      object-fit: cover !important
+  .blog__text
+    flex-basis: 50%
+    padding: 25px 25px 25px 45px
+    background-color: $red
+    box-sizing: border-box
+    position: relative
+    &::before
+      content: ' '
+      border: 30px solid transparent
+      border-right: 25px solid $red
+      position: absolute
+      top: 50%
+      left: -55px
+      transform: translateY(-50%)
+    p
+      font-size: 16px
+      line-height: 30px
+      color: white
+      text-align: left
+    .blog__category
+      font-size: 14px
+      letter-spacing: 0.7px
+    .blog__name
+      font-size: 24px
+      letter-spacing: 1.2px
+      font-family: 'Source Sans Pro', sans-serif
+      font-weight: 600
+      &::after
+        content: ' '
+        width: 44px
+        height: 4px
+        display: block
+        background-color: #fff
+        margin-top: 15px
+    a
+      color: white
+      text-decoration: none
+      font-size: 18px
+      font-style: italic
+      line-height: 24px
+      font-weight: 600
+      display: inline-block
+      margin: 20px 0
+      &::after
+        content: '\00BB'
+        padding-left: 5px
+        font-size: 18px
+        line-height: 24px
+        display: inline-block
+      &:hover
+        text-decoration: underline
+@media (max-width: 1200px)
+  .blog
+    .blog__text
+      padding: 20px 15px
+@media (max-width: 980px)
+  .blog
+    padding: 50px 0
+    .blog__element
+      flex-basis: 100%
+      .blog__img
+        width: 100%
+      &:nth-child(odd)
+        .blog__img
+          order: 2
+        .blog__text
+          order: 1
+          &::before
+            right: -55px
+            left: auto
+            border: 30px solid transparent
+            border-left: 30px solid $red
+      &:nth-child(even)
+        .blog__img
+          order: 1
+        .blog__text
+          order: 2
+          &::before
+            left: -55px
+            right: auto
+            border: 30px solid transparent
+            border-right: 30px solid $red
+@media(max-width: 580px)
+  .blog
+    .blog__element
+      &:nth-child(odd), &:nth-child(even)
+        .blog__img
+          order: 1
+          flex-basis: 100%
+          img
+            width: 100%
+            height: auto
+        .blog__text
+          order: 1
+          flex-basis: 100%
+          &::before
+            display: none

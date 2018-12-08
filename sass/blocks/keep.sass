@@ -1,0 +1,124 @@
+.keep
+  background-color: $white-gray
+  padding: 140px 0
+  p
+    font-size: 14px
+    margin: 20px 0
+    text-align: center
+    line-height: 29px
+    color: $advatages-gray
+  .keep__devider
+    @include devider($advatages-gray)
+  .keep__title
+    text-align: center
+    color: $gray
+    font-size: 36px
+    letter-spacing: 3.6px
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 700
+    text-transform: uppercase
+  .keep__block
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 60px
+  .keep__left
+    flex-basis: 40.8%
+    background-color: #fff
+    box-shadow: 0 3px 5px rgba(0,0,0,.1)
+    border-radius: 2px/5px
+    padding: 30px 95px
+    box-sizing: border-box
+  .keep__right
+    flex-basis: 56.8%
+    background-color: #fff
+    box-shadow: 0 3px 5px rgba(0,0,0,.1)
+    border-radius: 3px/5px
+    padding: 30px 95px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    .keep__form
+      flex-basis: 100%
+      margin-top: 20px
+  .keep__info
+    margin: 55px 0
+    p
+      text-align: left
+      color: $advatages-gray
+      font-size: 18px
+      line-height: 24px
+      margin: 20px 0
+      &:first-child
+        font-size: 24px
+        line-height: 24px
+        font-weight: 600
+        font-family: 'Source Sans Pro', sans-serif
+        color: $red
+        text-transform: uppercase
+    a
+      color: $advatages-gray
+      font-size: 18px
+      line-height: 24px
+      text-decoration: none
+  .keep__form
+    .keep__input, .keep__textarea
+      position: relative
+      margin: 20px 0
+      input, textarea
+        color: $advatages-gray
+        font-size: 14px
+        line-height: 24px
+        width: 100%
+        font-weight: 600
+        border: none
+        border-bottom: 1px solid $advatages-gray
+        padding: 7px
+        box-shadow: none
+        &:focus + label, &:valid + label
+          transform: translateY(-17px)
+          font-size: 12px
+    textarea
+      height: 100px
+      resize: none
+      outline: none
+    label
+      color: $advatages-gray
+      font-size: 14px
+      line-height: 24px
+      width: 100%
+      position: absolute
+      left: 0
+      top: 5px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      pointer-events: none
+      transition-duration: 500ms
+  .keep__button
+    margin: 25px 0
+    margin-bottom: 50px
+    button
+      @include btn()
+        cursor: pointer
+        width: 157px
+        padding: 14px 0
+@media (max-width: 980px)
+  .keep
+    padding-bottom: 50px
+    .keep__left
+      padding: 30px
+    .keep__right
+      padding: 0 30px
+@media (max-width: 768px)
+  .keep
+    .keep__info
+      margin: 25px 0
+    .keep__left
+      flex-basis: 100%
+      margin: 20px 0
+    .keep__right
+      flex-basis: 100%
+      margin: 20px 0
+

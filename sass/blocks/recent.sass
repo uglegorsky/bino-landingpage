@@ -1,0 +1,107 @@
+.recent
+  margin-top: 140px
+  > p
+    font-size: 14px
+    margin: 20px 0
+    text-align: center
+    line-height: 29px
+    color: $advatages-gray
+  .recent__devider
+    @include devider($advatages-gray)
+  .recent__title
+    color: $gray
+    font-size: 36px
+    letter-spacing: 3.6px
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 700
+    text-transform: uppercase
+  .recent__links
+    margin: 40px 0
+    text-align: center
+    color: $advatages-gray
+    a
+      text-decoration: none
+      font-size: 14px
+      color: $advatages-gray
+      display: inline-block
+      margin: 5px 20px
+      transition-duration: 500ms
+      transition-property: color
+      &:hover
+        color: $red
+  .recent__block
+    display: flex
+    flex-wrap: wrap
+    max-width: 1920px
+    margin: 40px auto 0
+
+  .recent__element
+    flex-basis: 25%
+    position: relative
+    img
+      display: block
+      max-width: 100%
+    a
+      display: block
+      text-decoration: none
+      &::after
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        background-color: rgba(231,76, 60, .8)
+        opacity: 0
+        transition-duration: 500ms
+        transition-property: opacity
+      &:hover
+        &::after, p
+          opacity: 1
+    p
+      position: absolute
+      left: 10%
+      bottom: 35px
+      z-index: 1
+      color: $white
+      opacity: 0
+      transition-duration: 500ms
+      transition-property: opacity
+      &::before
+        content: ''
+        height: 4px
+        width: 44px
+        background-color: #fff
+        margin-bottom: 25px
+        display: block
+      span
+        display: block
+        margin: 15px 0
+        font-size: 14px
+        letter-spacing: 0.7px
+        &:first-child
+          font-family: 'Source Sans Pro', sans-serif
+          text-transform: uppercase
+          font-size: 24px
+          font-weight: 600
+          letter-spacing: 1.2px
+
+@media (max-width: 980px)
+  .recent
+    margin-top: 50px
+    .recent__element
+      p
+        bottom: 10px
+        span
+          &:first-child
+            font-size: 18px
+
+@media (max-width: 768px)
+  .recent
+    .recent__element
+      flex-basis: 50%
+
+@media (max-width: 480px)
+  .recent
+    .recent__element
+      flex-basis: 100%

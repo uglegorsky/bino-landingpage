@@ -1,0 +1,92 @@
+.service
+  background-color: #202020
+  max-width: 1920px
+  margin: 140px auto
+  padding: 150px 0
+  position: relative
+  &::after
+    content: ''
+    width: 46%
+    height: 100%
+    display: block
+    background: url("../../img/services-bg.jpg") right top no-repeat
+    background-size: cover
+    position: absolute
+    right: 0
+    top: 0
+  .service__title
+    font-family: 'Source Sans Pro', sans-serif
+    font-size: 36px
+    line-height: 36px
+    color: $white-gray
+    letter-spacing: 3.6px
+    font-weight: 700
+    text-transform: uppercase
+    padding-right: 25px
+    border-right: 6px solid $red
+    margin-bottom: 60px
+    margin-right: 80px
+  .service__block
+    width: 54%
+    text-align: right
+  .service__element
+    max-width: 665px
+    margin: 55px 80px 55px auto
+    position: relative
+    &:last-child
+      margin-bottom: 0
+    p
+      font-size: 14px
+      line-height: 29px
+      color: $gray
+      font-family: 'Source Sans Pro', sans-serif
+      &:first-of-type
+        text-transform: uppercase
+        color: $red
+        font-family: 'Open Sans', sans-serif
+        font-weight: 600
+        font-size: 18px
+    .service__icon
+      width: 64px
+      height: 64px
+      border: 5px solid rgba(255, 255, 255, 0.25)
+      position: absolute
+      right: -117px
+      top: 50%
+      transform: translate(0, -50%)
+      z-index: 2
+      border-radius: 50%
+      background-color: $white-gray
+      img
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+@media (max-width: 980px)
+  .service
+    margin: 50px 0
+    padding: 50px 0
+
+@media (max-width: 768px)
+  .service
+    padding-left: 15px
+    padding-right: 15px
+
+    &::after
+      display: none
+    .service__block
+      width: 100%
+      text-align: left
+    .service__title
+      padding-right: 0
+      padding-left: 25px
+      border-right: none
+      border-left: 6px solid $red
+    .service__element
+      max-width: 100%
+      margin: 25px 0
+      padding-right: 80px
+      box-sizing: border-box
+      .service__icon
+        right: 0

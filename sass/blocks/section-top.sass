@@ -1,0 +1,77 @@
+.section-top
+  background: url("../../img/section-top-bg.jpg") top center no-repeat
+  background-size: cover
+  position: relative
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0 80%)
+
+  &::after
+    content: ''
+    background-color: rgba(0,0,0,0.7)
+    display: block
+    position: absolute
+    z-index: 1
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+
+  &__header
+    position: relative
+    z-index: 2
+    padding: 40px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__menu
+    flex-basis: 62.5%
+
+  &__info
+    padding: 180px 0 300px
+    text-align: center
+    position: relative
+    z-index: 2
+    > p
+      max-width: 600px
+      margin: 20px auto
+      font-size: 14px
+      line-height: 24px
+      color: $gray-light
+    h1
+      font-size: 24px
+      letter-spacing: 1.2px
+      color: $white-gray
+      font-family: 'Source Sans Pro', sans-serif
+      span
+        font-size: 72px
+        font-weight: 700
+        font-family: 'Open Sans', sans-serif
+        text-transform: uppercase
+        letter-spacing: 7.2px
+        margin: 30px 0 20px
+        display: block
+
+@media (max-width: 980px)
+  .section-top
+    .section-top__info
+      padding-top: 50px
+      h1
+        span
+          font-size: 42px
+
+@media (max-width: 768px)
+  .section-top
+    .section-top__header
+      flex-wrap: wrap
+
+    .section-top__logo
+      flex-basis: 100%
+      text-align: center
+      margin-bottom: 30px
+
+    .section-top__menu
+      flex-basis: 100%
+
+    .section-top__info
+      > p
+        max-width: 100%

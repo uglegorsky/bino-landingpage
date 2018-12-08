@@ -1,0 +1,119 @@
+.price
+  margin: 140px 0
+  p
+    font-size: 14px
+    margin: 20px 0
+    text-align: center
+    line-height: 29px
+    color: $advatages-gray
+  .price__devider
+    @include devider($advatages-gray)
+  .price__title
+    text-align: center
+    color: $gray
+    font-size: 36px
+    letter-spacing: 3.6px
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 700
+    text-transform: uppercase
+  .price__block
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 40px
+  .price__element
+    flex-basis: 32.4%
+    margin-top: 20px
+    background-color: $white-gray
+    &:hover
+      .price__top
+        background-color: $red
+      .price__bottom
+        .price__number
+          p
+            color: $red
+
+    .price__top
+      background-color: $advatages-gray
+      padding-bottom: 90px
+      transition-duration: 500ms
+      transition-property: background-color
+      .price__name
+        font-family: 'Open Sans', sans-serif
+        font-weight: 600
+        font-size: 24px
+        text-transform: uppercase
+        letter-spacing: 1.8px
+        color: white
+        padding: 40px 0
+        margin: 0
+    .price__bottom
+      padding-bottom: 20px
+      .price__number
+        width: 153px
+        background-color: #fff
+        border: 10px solid rgba(112, 115, 108, 0.25)
+        border-radius: 50%
+        margin: -86px auto 0
+        padding: 46px 0
+        p
+          font-family: 'Source Sans Pro', sans-serif
+          font-weight: 700
+          font-size: 39px
+          line-height: 40px
+          margin: 0
+          color: $advatages-gray
+          transition-duration: 500ms
+          transition-property: color
+          span
+            display: block
+            font-size: 13px
+            line-height: 21px
+            font-weight: 400
+      .price__list
+        text-align: center
+        margin: 40px 0
+        li
+          font-family: 'Open Sans', sans-serif
+          font-weight: 600
+          line-height: 20px
+          font-size: 14px
+          color: $advatages-gray
+      .price__btn
+        @include btn($advatages-gray)
+          width: 145px
+          padding: 15px 0
+          display: block
+          font-size: 12px
+          font-family: 'Open Sans', sans-serif
+          font-weight: 600
+          line-height: 16px
+          letter-spacing: 0.12px
+          display: block
+          margin: 30px auto
+  .price__element--red
+    .price__top
+      background-color: $red
+    .price__bottom
+      .price__number
+        p
+          color: $red
+      .price__btn
+        background-color: $red
+        border-color: $red
+@media (max-width: 980px)
+  .price
+    margin: 50px 0
+@media (max-width: 768px)
+  .price
+    .price__block
+      justify-content: center
+    .price__element
+      flex-basis: 45%
+      margin: 20px 2.5%
+@media (max-width: 580px)
+  .price
+    .price__element
+      flex-basis: 100%
+      margin: 15px 0
+
